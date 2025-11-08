@@ -1,0 +1,194 @@
+/* Reset e Fonte */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container Principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Títulos */
+.text-center { text-align: center; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.ml-3 { margin-left: 0.75rem; }
+
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-xl { font-size: 1.25rem; }
+.text-lg { font-size: 1.125rem; }
+.text-sm { font-size: 0.875rem; }
+
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+
+.text-blue-600 { color: #2563eb; }
+.text-blue-700 { color: #1d4ed8; }
+.text-blue-800 { color: #1e40af; }
+.text-gray-500 { color: #6b7280; }
+.text-gray-600 { color: #4b5563; }
+.text-gray-700 { color: #374151; }
+.text-gray-900 { color: #111827; }
+
+/* Visualizações (Views) */
+.view { display: none; }
+.view.active { display: block; }
+
+/* Cards */
+.card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease-in-out;
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.category-card, .exercise-card {
+    cursor: pointer;
+}
+.category-card:hover, .exercise-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.card.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Botões */
+.button-back {
+    margin-bottom: 1rem;
+    color: #2563eb;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.button-back:hover {
+    text-decoration: underline;
+}
+
+.button-primary {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+.button-primary:hover {
+    background-color: #1d4ed8;
+}
+.button-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Input de Arquivo */
+.input-file {
+    font-size: 0.9rem;
+    width: 100%;
+}
+.input-file::file-selector-button {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: 0;
+    font-weight: 600;
+    background-color: #eef2ff;
+    color: #1d4ed8;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.input-file::file-selector-button:hover {
+    background-color: #dbeafe;
+}
+
+/* Tags */
+.tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin-top: 0.75rem;
+    display: inline-block;
+}
+.tag-blue { background-color: #dbeafe; color: #1e40af; }
+.tag-green { background-color: #d1fae5; color: #065f46; }
+
+/* Seção de Análise */
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+#video-player, #output-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#video-player {
+    border-radius: 0.5rem;
+}
+
+.feedback-box {
+    background-color: #eef2ff;
+    border-left: 4px solid #2563eb;
+    padding: 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin-top: 1rem;
+}
+.feedback-box ul {
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.25rem;
+}
+.feedback-box li { margin-bottom: 0.25rem; }
+
+/* Feedback Colors */
+.fb-success { color: #059669; }
+.fb-warning { color: #d97706; }
+.fb-error { color: #dc2626; }
+.fb-info { color: #374151; }
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 4px solid #e5e7eb;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
