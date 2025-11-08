@@ -19,7 +19,7 @@ import { analisarRoscaBiceps } from './exercicios/parte_superior/rosca_biceps.js
 
 
 // === CONSTANTES E VARIÁVEIS GLOBAIS ===
-const COHERE_API_KEY = "ek9WqUvcwC7jB2rc0V3JY7a4E09bQ2vyixEOz7KE";
+const COHERE_API_KEY = "";
 
 // Referências aos Elementos DOM
 // (código existente)
@@ -393,4 +393,5 @@ function addFeedback(message, type = "info") {
     li.className = colorClass;
     li.innerHTML = `${icon} ${message}`;
     feedbackList.appendChild(li);
+
 }
