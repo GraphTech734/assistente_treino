@@ -340,7 +340,7 @@ async function generateCohereReport() {
         const response = await fetch('https://api.cohere.com/v1/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${COHERE_API_KEY}` },
-            body: JSON.stringify({ message: prompt, model: 'command-r', temperature: 0.3 }),
+            body: JSON.stringify({ message: prompt, model: 'command-r-08-2024', temperature: 0.3 }),
         });
 
         if (!response.ok) {
@@ -395,4 +395,5 @@ function addFeedback(message, type = "info") {
     feedbackList.appendChild(li);
 
 }
+
 
